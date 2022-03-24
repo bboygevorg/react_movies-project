@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 const Search = (props) => {
-    const {searchMovies = Function.prototype } = props;
+    const {searchMovies = () => {} } = props;
 
     const [search, setSearch] = useState('');
     const [type, setType] = useState('all');
