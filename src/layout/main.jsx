@@ -26,7 +26,7 @@ function Main() {
     };
 
     useEffect(() => {
-        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=the naked gun`)
+        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=friends`)
             .then(response => response.json())
             .then(data => {
                 setMovies(data.Search);
