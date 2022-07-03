@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Movies} from "../components/movies";
 import {Search} from "../components/search";
-import {Preloader} from "../components/preloader";
+import {Preloader} from "../components/Preloader";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -26,7 +26,7 @@ function Main() {
     };
 
     useEffect(() => {
-        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=terminator`)
+        fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=the naked gun`)
             .then(response => response.json())
             .then(data => {
                 setMovies(data.Search);
